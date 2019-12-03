@@ -42,6 +42,8 @@ You can also configure `preoomkiller` to send its signal to pid 1 (see below)
 
 `PREOOMKILLER_KILL_PID` (integer) - what pid will receive a SIGTERM (default: the pid of the parent that spawned `preoomkiller`) If you don't start `preoomkiller` and your application's main process via an entrypoint script (see the example `docker-entrypoint.sh`) you can also set this to `1`.  Note: make sure you're using an init system like [dumb-init](https://github.com/Yelp/dumb-init) to make sure the pid 1 process properly proxies signals to children
 
+`PREOOMKILLER_GRACE_PERIOD` (integer) - how many seconds to sleep after sending `PREOOMKILLER_KILL_SIGNAL` to `PREOOMKILLER_KILL_PID` (default `30`)
+
 `PREOOMKILLER_DEBUG` - if set, print memory statistics when polling
 
 ## Testing
