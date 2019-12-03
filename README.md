@@ -1,5 +1,5 @@
 # docker-preoomkiller
-Watches container memory use and softly kills the container with SIGTERM before Docker OOMKills it
+Watches container memory use and sends a custom signal to a process in the container before Docker OOMKills it
 
 ## Dependencies
 
@@ -9,7 +9,7 @@ Python 2 / 3
 
 ## Install
 
-With `curl`: put `RUN curl -sSf https://raw.githubusercontent.com/izakp/docker-preoomkiller/master/install-preoomkiller.sh | sh` in your Dockerfile to install `preoomkiller` to `/usr/local/bin`
+With `curl`: put `RUN curl -sSf https://raw.githubusercontent.com/artsy/docker-preoomkiller/master/install-preoomkiller.sh | sh` in your Dockerfile to install `preoomkiller` to `/usr/local/bin`
 
 Manually `ADD` `preoomkiller` to your Docker image somewhere on your `$PATH`
 
