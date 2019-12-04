@@ -11,7 +11,7 @@ Python 2 / 3
 
 With `curl`: put `RUN curl -sSf https://raw.githubusercontent.com/artsy/docker-preoomkiller/master/install-preoomkiller.sh | sh` in your Dockerfile to install `preoomkiller` to `/usr/local/bin`
 
-Manually `ADD` `preoomkiller` to your Docker image somewhere on your `$PATH`
+Or: manually `ADD` `preoomkiller` to your Docker image somewhere on your `$PATH`
 
 ## Use
 
