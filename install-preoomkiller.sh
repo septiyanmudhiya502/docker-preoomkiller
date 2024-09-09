@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# curl -sSf https://raw.githubusercontent.com/artsy/docker-preoomkiller/master/install-preoomkiller.sh | sh
+# curl -sSf https://raw.githubusercontent.com/septiyanmudhiya502/docker-preoomkiller/master/install-preoomkiller.sh | sh
 
 set -e
 
-loc='https://raw.githubusercontent.com/artsy/docker-preoomkiller/master/preoomkiller'
+loc='https://raw.githubusercontent.com/septiyanmudhiya502/docker-preoomkiller/master/preoomkiller'
 out='/usr/local/bin/preoomkiller'
 
 check_cmd() {
