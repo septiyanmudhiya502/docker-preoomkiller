@@ -42,12 +42,10 @@ def byteNumRepr(c):
   return "%.1f %sB" % (f, S[i])
 
 def getRssLimit():
-  return int(open("/sys/fs/cgroup/memory/memory.limit_in_bytes").read())
+  return int(open("/sys/fs/cgroup/memory.max").read())
 
 def getTotalRss():
-  stats = open("/sys/fs/cgroup/memory/memory.stat").read().splitlines()
-  stats = dict([(key,int(value)) for key,value in map(str.split, stats)])
-  return stats["rss"]
+  return int(open("/sys/fs/cgroup/memory.current").read())
 
 def getMemoryStats():
   try:
